@@ -1,0 +1,15 @@
+5
+Fried-Rice 50
+Pad-Thai 60
+Pizza 200
+Fish&Chips 120
+Spaghetti 80
+2
+111 4 3
+Fried-Rice 3
+Pad-Thai 1
+Pizza 2
+112 7 2
+Fried-Rice 1
+Spaghetti 2
+Fish&Chips

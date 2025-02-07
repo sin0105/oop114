@@ -1,0 +1,7 @@
+101 20 3
+Fried-Rice
+50 2
+Pad-Thai
+60 1
+Pizza
+200 2
