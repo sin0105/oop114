@@ -1,27 +1,38 @@
-import java.util.Scanner;
+//Chonlanna Saikhampa
+//670510702
+
+import java.util.*;
 public class Lab10_2 {
     static Scanner in = new Scanner (System.in); 
     public static void main(String[] args) {  
         int maxSize = in.nextInt();
         char Type  = in.next().charAt(0);
+        int  num;
         if (Type == 'C'){
-            //insert code here
-
-
+            curQueue <Character> objC = new curQueue(maxSize);
+            
+            do {
+                num = in.nextInt();
+                if (num == 1) objC.enqueue(in.next().charAt(0));
+                if (num == 2) System.out.println( objC.dequeue());
+                if (num == 3) objC.show();
+            } while (num != 4 );
         }
         else{
-            //insert code here
-
-
+            curQueue <Integer> objI = new curQueue(maxSize);
+            do {
+                num = in.nextInt();
+                if (num == 1) objI.enqueue(in.nextInt());
+                if (num == 2) System.out.println(objI.dequeue());
+                if (num == 3) objI.show();
+            } while (num != 4 );
         }
 
     }
 }
 class curQueue<TYPE>  {
-    // member data
     private final Object [] item;
-    //insert code here
-   
+    private int maxSize, front, rear, count;
 
 
     curQueue (int n ) { //constructor for creating circular queue
@@ -31,13 +42,16 @@ class curQueue<TYPE>  {
         this.rear= n-1;
         this.count=0;
     }
-    // member methods
+
     private boolean isEmpty(){ 
-        //insert code here
+        if (count == 0) return true;
+        else return false;
+    } 
 
-
-
-    }// end isEmpty()  
+    private boolean isFull(){ 
+        if (count == maxSize) return true;
+        else return false;
+    } 
 
     public void enqueue(TYPE  v) {         
         if (isFull()) 
@@ -47,7 +61,7 @@ class curQueue<TYPE>  {
             item[rear] = v;
             count++; 
         }
-    }// end enqueue()  
+    }
     
     public TYPE dequeue()  {  
         if (!isEmpty()){
@@ -57,16 +71,19 @@ class curQueue<TYPE>  {
             return (TYPE)queueFront;   
         }
         return null;
-    }// end dequeue()  
+    }
 
-    //insert code here
-
-
-
-
-
-
-
-
-}//end class CirQueue
+    public void show() {
+        if (isEmpty()) 
+            System.out.println("empty");
+        else {
+            boolean stop = false;
+            for (int i = front; ! stop; i = (i + 1)% maxSize) {
+                System.out.print(item[i] + " ");
+                if (i == rear) stop = true;
+            }
+            System.out.println();
+        }
+    }
+}
 

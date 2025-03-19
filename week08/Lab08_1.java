@@ -32,7 +32,7 @@ class Order {
     private OrderItem[] items;
     private int totalPrice = 0;
 
-    public Order(int size) {
+    Order(int size) {
         items = new OrderItem[size];
         for (int i = 0; i < size; i++) {
             items[i] = new OrderItem();

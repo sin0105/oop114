@@ -1,17 +1,16 @@
 import java.util.Scanner;
 import java.text.DecimalFormat;
 public class Lab07_1 { 
-    // you can insert other methods to complish your work
     public static void printAllStudents(Student [] stu,int num_s) {
         System.out.println("Student");
         for (int i = 0; i < num_s; i++) {
             System.out.println((i+1) + ")" + stu[i].printData());
         }
-
     }
+    
     public static void printAllTeachers(Teacher [] teacher,int num_t) {
         System.out.println("Teacher");
-        for (int i = 0; i < num_t; i++) {
+        for (int i = 0; i < num_t; i++) { 
             System.out.println((i+1) + ")" + teacher[i].printData());
         }
 
@@ -31,7 +30,7 @@ public class Lab07_1 {
        if (num_s != 0  )avg_s = ((double)sum_s/num_s);
        if (num_t != 0 ) avg_t = ((double)sum_t/num_t);
         
-         for (i = 0; i < num_t; i++) {
+        for (i = 0; i < num_t; i++) {
             if (teacher[i].getAge() < avg_t)
                 less++;
         }
@@ -85,9 +84,9 @@ class Person {
     public int getAge() {
         return age;
     }
-    
-    
+
 }
+
 class Student  extends Person  {  
     private int level;
     

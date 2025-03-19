@@ -6,7 +6,7 @@ public class Lab08_3 {
     public static void checkOrder(Order[] orderlist, String check){
         boolean found = false;
         for (Order order : orderlist) {
-            if (order.haveFood(check)) {
+            if (order.checkFood(check)) {
                 System.out.println(order.getOrderId());
                 found = true;
             }
@@ -22,6 +22,7 @@ public class Lab08_3 {
             foodList[i] = new Food();
             foodList[i].setData(read.next(), (short)read.nextInt());
         }
+        
 	
         int K = read.nextInt();
 		Order [] orderList = new Order[K];
@@ -49,16 +50,6 @@ public class Lab08_3 {
 
         System.out.println(allSale);
         String check = read.next();
-
-        // int round_check = 0;
-        // for (int i = 0; i < K; i++) {
-        //     if (orderList[i].checkFood(check))
-        //         System.out.println(orderList[i].getOrderId());
-        //         round_check ++;
-        // }
-        // if (round_check == 0) 
-        //     System.out.println("Null");
-
         checkOrder(orderList, check);
     }
 }
@@ -107,17 +98,6 @@ class Order {
         }
         return false;
     }
-
-    public boolean haveFood(String check) {
-        if (items == null || items.length == 0)
-            return false;
-        for (OrderItem item : items) {
-            if (item != null && item.getFoodName().equals(check))
-                return true;
-        }
-        return false;
-    }
-
 }
 
 class OrderItem {

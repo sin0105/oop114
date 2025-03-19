@@ -140,21 +140,21 @@ class Square  extends Shape2Dim{
     @Override
     public void draw(){
         for (int i = 0; i < N; i++) {
-        if (i == 0 || i == N-1) {
-            for (int j = 0; j < N; j++){
-                System.out.print(symbol);
-            }
-        }
-        else {
-            for (int j = 0; j < N; j++) {
-                if (j == 0 || j == N-1)
+            if (i == 0 || i == N-1) {
+                for (int j = 0; j < N; j++){
                     System.out.print(symbol);
-            
-                else 
-                    System.out.print(" " );
+                }
             }
-        }
-        System.out.println();
+            else {
+                for (int j = 0; j < N; j++) {
+                    if (j == 0 || j == N-1)
+                        System.out.print(symbol);
+                
+                    else 
+                        System.out.print(" " );
+                }
+            }
+            System.out.println();
         }
         
     }

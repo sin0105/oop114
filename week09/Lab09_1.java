@@ -73,10 +73,6 @@ class Undergraduate_Student extends Student {
         projectScore = n;
     }
 
-    public int getProjectScore() { 
-        return projectScore; 
-    }
-
     @Override
     public char calGrade(){  
         if ((midtermScore + finalScore) >= 50 && projectScore >= 50)

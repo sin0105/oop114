@@ -11,8 +11,6 @@ public class Lab10_1 {
     }
     public static <TYPE extends Comparable>  void getCenter(TYPE d1, TYPE d2, TYPE d3){ 
         TYPE center = d1;
-        // if ((d1.compareTo(d2) < 0 && d1.compareTo(d3) > 0 )|| (d1.compareTo(d2) > 0 && d1.compareTo(d3) < 0))
-        //     center = d1;
         if ((d2.compareTo(d1) <= 0 && d2.compareTo(d3) >= 0 )|| (d2.compareTo(d1) >= 0 && d2.compareTo(d3) <= 0))
             center = d2;
         if ((d3.compareTo(d1) <= 0 && d3.compareTo(d2) >= 0 )|| (d3.compareTo(d1) >= 0 && d3.compareTo(d2) <= 0))
@@ -38,8 +36,6 @@ public class Lab10_1 {
         if (d3.compareTo(max) > 0) max = d3;
 
         TYPE center = d1;
-        // if ((d1.compareTo(d2) < 0 && d1.compareTo(d3) > 0 )|| (d1.compareTo(d2) > 0 && d1.compareTo(d3) < 0))
-        //     center = d1;
         if ((d2.compareTo(d1) <= 0 && d2.compareTo(d3) >= 0 )|| (d2.compareTo(d1) >= 0 && d2.compareTo(d3) <= 0))
             center = d2;
         if ((d3.compareTo(d1) <= 0 && d3.compareTo(d2) >= 0 )|| (d3.compareTo(d1) >= 0 && d3.compareTo(d2) <= 0))
